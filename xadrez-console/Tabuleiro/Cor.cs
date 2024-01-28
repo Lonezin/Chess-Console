@@ -1,4 +1,4 @@
-namespace Chess_Console.Tabuleiro
+namespace Chess_Console_Tabuleiroz
 {
     public enum Cor
     {
