@@ -1,4 +1,6 @@
-﻿using Chess_Console_Tabuleiroz;
+﻿using Chess_Console.Tabuleiroz;
+using Chess_Console.Xadrez;
+using Chess_Console_Tabuleiroz;
 
 namespace Chess_Console
 {
@@ -6,8 +8,8 @@ namespace Chess_Console
     {
         static void Main(string[] args)
         {
-            Tabuleiro tab = new Tabuleiro(8,8);
-            Tela.ImprimirTela(tab);
+           PosicaoXadrez pos = new PosicaoXadrez('a', 1);
+           System.Console.WriteLine(pos);
         }
     }
 }
