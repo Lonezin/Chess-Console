@@ -1,4 +1,4 @@
-namespace Tabuleiro
+namespace Chess_Console.Tabuleiro
 {
     public class Posicao
     {
