@@ -20,7 +20,7 @@ namespace Chess_Console
                     Posicao origem = Tela.LerPosicaoXadrez().ToPosicao();
                     Console.Write("Destino: ");
                     Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
-
+                    Tela.ImprimirTela(partida.Tab);
                     partida.ExecutaMovimento(origem, destino);
                 }
                 

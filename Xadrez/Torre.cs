@@ -48,6 +48,15 @@ namespace Chess_Console.Xadrez
                     break;
                 }
             }
+            //esquerda
+            pos.DefinirValores(pos.Linha, pos.Coluna - 1);
+            while (Tab.PosicaoValida(pos) && PodeMover (pos))
+            {
+                if (Tab.Peca(pos) != null && Tab.Peca(pos).Cor != Cor)
+                {
+                    
+                }
+            }
             return mat;
         }
         public override string ToString()

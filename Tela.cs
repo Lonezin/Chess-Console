@@ -26,11 +26,36 @@ namespace Chess_Console
             }
             System.Console.WriteLine("  A  B  C  D  E  F  G  H");
         }
+        public static void ImprimirTela(Tabuleiro tab, bool[,] posicoesPossiveis)
+        {
+            ConsoleColor fundoOriginal = Console.BackgroundColor;
+            ConsoleColor fundoAlterado = ConsoleColor.DarkGray;
+
+            for (int i = 0; i < tab.Linha; i++)
+            {
+                Console.Write(8 - i);
+                for (int j = 0; j < tab.Coluna; j++)
+                {
+                    if(posicoesPossiveis[i,j])
+                    {
+                        Console.BackgroundColor = fundoAlterado;
+                    }
+                    else
+                    {
+                        Console.BackgroundColor = fundoOriginal;    
+                    }
+                    ImprimirPeca(tab.Peca(i,j));
+                }
+                System.Console.WriteLine();
+            }
+            System.Console.WriteLine("  A  B  C  D  E  F  G  H");
+            Console.BackgroundColor = fundoOriginal;
+        }
         public static PosicaoXadrez LerPosicaoXadrez()
         {
             string s = Console.ReadLine();
             char coluna = s[0];
-            int  linha = int.Parse(s[1] + "");
+            int  linha = int.Parse(s[1].ToString());
             return new PosicaoXadrez(coluna, linha);
         }
         public static void ImprimirPeca(Peca peca)
