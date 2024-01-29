@@ -12,7 +12,7 @@ namespace Chess_Console.Xadrez
            Coluna = coluna;
            Linha = linha; 
         }
-        public Posicao ToPosicao(Posicao pos)
+        public Posicao ToPosicao()
         {
             return new Posicao(8 - Linha, Coluna - 'a');
         }

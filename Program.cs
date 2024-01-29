@@ -8,8 +8,28 @@ namespace Chess_Console
     {
         static void Main(string[] args)
         {
-           PosicaoXadrez pos = new PosicaoXadrez('a', 1);
-           System.Console.WriteLine(pos);
+            try
+            {
+                PartidaDeXadrez partida = new PartidaDeXadrez();
+                while (!partida.Terminada)
+                {
+                    Console.Clear();
+                    Tela.ImprimirTela(partida.Tab);
+
+                    Console.Write("Origem: ");
+                    Posicao origem = Tela.LerPosicaoXadrez().ToPosicao();
+                    Console.Write("Destino: ");
+                    Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
+
+                    partida.ExecutaMovimento(origem, destino);
+                }
+                
+                
+            }
+            catch (TabuleiroException e)
+            {
+                System.Console.WriteLine(e.Message);
+            }
         }
     }
 }

@@ -15,5 +15,9 @@ namespace Chess_Console_Tabuleiroz
             Cor = cor;
             QteMovimentos = 0;
         }
+        public void IcrementarQteMovimentos()
+        {
+            QteMovimentos ++;
+        }
     }
 }
