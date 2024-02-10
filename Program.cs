@@ -15,7 +15,7 @@ namespace Chess_Console
                 {   
                     try{
                     Console.Clear();
-                    Tela.ImprimirTela(partida.Tab);
+                    Tela.ImprimirPartida(partida);
                     System.Console.WriteLine();
                     Console.WriteLine($"Turno: {partida.Turno}");
                     Console.WriteLine($"Aguardando jogada: {partida.JogadorAtual}");
