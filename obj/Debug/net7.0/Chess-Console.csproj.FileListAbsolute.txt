@@ -12,3 +12,17 @@ C:\Users\lonez\Desktop\Projetos\Chess-Console\obj\Debug\net7.0\refint\Chess-Cons
 C:\Users\lonez\Desktop\Projetos\Chess-Console\obj\Debug\net7.0\Chess-Console.pdb
 C:\Users\lonez\Desktop\Projetos\Chess-Console\obj\Debug\net7.0\Chess-Console.genruntimeconfig.cache
 C:\Users\lonez\Desktop\Projetos\Chess-Console\obj\Debug\net7.0\ref\Chess-Console.dll
+C:\Users\lonez\Desktop\Fac\Projetos\Chess-Console\bin\Debug\net7.0\Chess-Console.exe
+C:\Users\lonez\Desktop\Fac\Projetos\Chess-Console\bin\Debug\net7.0\Chess-Console.deps.json
+C:\Users\lonez\Desktop\Fac\Projetos\Chess-Console\bin\Debug\net7.0\Chess-Console.runtimeconfig.json
+C:\Users\lonez\Desktop\Fac\Projetos\Chess-Console\bin\Debug\net7.0\Chess-Console.dll
+C:\Users\lonez\Desktop\Fac\Projetos\Chess-Console\bin\Debug\net7.0\Chess-Console.pdb
+C:\Users\lonez\Desktop\Fac\Projetos\Chess-Console\obj\Debug\net7.0\Chess-Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lonez\Desktop\Fac\Projetos\Chess-Console\obj\Debug\net7.0\Chess-Console.AssemblyInfoInputs.cache
+C:\Users\lonez\Desktop\Fac\Projetos\Chess-Console\obj\Debug\net7.0\Chess-Console.AssemblyInfo.cs
+C:\Users\lonez\Desktop\Fac\Projetos\Chess-Console\obj\Debug\net7.0\Chess-Console.csproj.CoreCompileInputs.cache
+C:\Users\lonez\Desktop\Fac\Projetos\Chess-Console\obj\Debug\net7.0\Chess-Console.dll
+C:\Users\lonez\Desktop\Fac\Projetos\Chess-Console\obj\Debug\net7.0\refint\Chess-Console.dll
+C:\Users\lonez\Desktop\Fac\Projetos\Chess-Console\obj\Debug\net7.0\Chess-Console.pdb
+C:\Users\lonez\Desktop\Fac\Projetos\Chess-Console\obj\Debug\net7.0\Chess-Console.genruntimeconfig.cache
+C:\Users\lonez\Desktop\Fac\Projetos\Chess-Console\obj\Debug\net7.0\ref\Chess-Console.dll

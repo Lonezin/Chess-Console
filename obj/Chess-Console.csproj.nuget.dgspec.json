@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lonez\\Desktop\\Projetos\\Chess-Console\\Chess-Console.csproj": {}
+    "C:\\Users\\lonez\\Desktop\\Fac\\Projetos\\Chess-Console\\Chess-Console.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lonez\\Desktop\\Projetos\\Chess-Console\\Chess-Console.csproj": {
+    "C:\\Users\\lonez\\Desktop\\Fac\\Projetos\\Chess-Console\\Chess-Console.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lonez\\Desktop\\Projetos\\Chess-Console\\Chess-Console.csproj",
+        "projectUniqueName": "C:\\Users\\lonez\\Desktop\\Fac\\Projetos\\Chess-Console\\Chess-Console.csproj",
         "projectName": "Chess-Console",
-        "projectPath": "C:\\Users\\lonez\\Desktop\\Projetos\\Chess-Console\\Chess-Console.csproj",
+        "projectPath": "C:\\Users\\lonez\\Desktop\\Fac\\Projetos\\Chess-Console\\Chess-Console.csproj",
         "packagesPath": "C:\\Users\\lonez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lonez\\Desktop\\Projetos\\Chess-Console\\obj\\",
+        "outputPath": "C:\\Users\\lonez\\Desktop\\Fac\\Projetos\\Chess-Console\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lonez\\AppData\\Roaming\\NuGet\\NuGet.Config"
