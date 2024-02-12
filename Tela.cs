@@ -12,10 +12,18 @@ namespace Chess_Console
             ImprimiePecaCapturada(partida);
             System.Console.WriteLine();
             Console.Write($"Turno: {partida.Turno} ");
-            Console.WriteLine($"Aguardando jogada: {partida.JogadorAtual}");
-            if (partida.Xeque)
+            if (!partida.Terminada)
             {
-                System.Console.WriteLine("XEQUE!");
+                System.Console.WriteLine($"Aguardando jogada: {partida.JogadorAtual}");
+                if (partida.Xeque)
+                {
+                    System.Console.WriteLine("XEQUE!");
+                }
+            }
+            else 
+            {
+                Console.WriteLine("XEQUE MATE!!");
+                Console.WriteLine($"Vencedor: {partida.JogadorAtual}");
             }
         } 
         public static void ImprimiePecaCapturada(PartidaDeXadrez partida)
