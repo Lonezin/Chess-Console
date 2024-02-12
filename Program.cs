@@ -17,8 +17,7 @@ namespace Chess_Console
                     Console.Clear();
                     Tela.ImprimirPartida(partida);
                     System.Console.WriteLine();
-                    Console.WriteLine($"Turno: {partida.Turno}");
-                    Console.WriteLine($"Aguardando jogada: {partida.JogadorAtual}");
+                   
                     Console.Write("Origem: ");
                     Posicao origem = Tela.LerPosicaoXadrez().ToPosicao();
                     partida.ValidarPosicaoDeOrigem(origem);

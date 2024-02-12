@@ -11,8 +11,12 @@ namespace Chess_Console
             System.Console.WriteLine();
             ImprimiePecaCapturada(partida);
             System.Console.WriteLine();
-            Console.Write($"Turno:{partida.Turno}");
-            Console.Write($"Aguardando jogada: {partida.JogadorAtual}");
+            Console.Write($"Turno: {partida.Turno} ");
+            Console.WriteLine($"Aguardando jogada: {partida.JogadorAtual}");
+            if (partida.Xeque)
+            {
+                System.Console.WriteLine("XEQUE!");
+            }
         } 
         public static void ImprimiePecaCapturada(PartidaDeXadrez partida)
         {

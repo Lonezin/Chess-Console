@@ -16,6 +16,10 @@ namespace Chess_Console_Tabuleiroz
             QteMovimentos = 0;
         }
         public abstract bool [,] MovimentosPossiveis();
+        public void DescrementarQteMovimentos()
+        {
+            QteMovimentos --;
+        }
         public void IcrementarQteMovimentos()
         {
             QteMovimentos ++;
