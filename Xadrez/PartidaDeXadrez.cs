@@ -211,12 +211,15 @@ namespace Chess_Console.Xadrez
             ColocaNovaPeca('h', 7, new Torre(Tab, Cor.Branca));
             ColocaNovaPeca('e', 2, new Torre(Tab, Cor.Branca));
             ColocaNovaPeca('e', 1, new Torre(Tab, Cor.Branca));
-            ColocaNovaPeca('d', 5, new Dama(Tab, Cor.Branca));
+            ColocaNovaPeca('d', 2, new Peao(Tab, Cor.Branca));
             ColocaNovaPeca('d', 1, new Rei(Tab, Cor.Branca));
 
 
             ColocaNovaPeca('a', 8, new Rei(Tab, Cor.Preta));
             ColocaNovaPeca('b', 8, new Torre(Tab, Cor.Preta));
+            ColocaNovaPeca('c', 5, new Torre(Tab, Cor.Preta));
+            ColocaNovaPeca('e', 5, new Torre(Tab, Cor.Preta));
+            ColocaNovaPeca('d', 4, new Torre(Tab, Cor.Preta));
         }
     }
 }

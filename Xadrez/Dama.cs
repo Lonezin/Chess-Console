@@ -113,7 +113,6 @@ namespace Chess_Console.Xadrez
                 pos.DefinirValores(pos.Linha - 1, pos.Coluna - 1);
             }
             return mat;
-
         }
     }
 }
