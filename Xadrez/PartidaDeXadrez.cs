@@ -211,7 +211,7 @@ namespace Chess_Console.Xadrez
             ColocaNovaPeca('h', 7, new Torre(Tab, Cor.Branca));
             ColocaNovaPeca('e', 2, new Torre(Tab, Cor.Branca));
             ColocaNovaPeca('e', 1, new Torre(Tab, Cor.Branca));
-            ColocaNovaPeca('d', 5, new Cavalo(Tab, Cor.Branca));
+            ColocaNovaPeca('d', 5, new Dama(Tab, Cor.Branca));
             ColocaNovaPeca('d', 1, new Rei(Tab, Cor.Branca));
 
 

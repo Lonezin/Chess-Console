@@ -83,9 +83,11 @@ namespace Chess_Console
                     Console.Write(" ");
                 }
                 System.Console.WriteLine();
+                Console.BackgroundColor = fundoOriginal;
+
             }
-            System.Console.WriteLine("  A  B  C  D  E  F  G  H");
             Console.BackgroundColor = fundoOriginal;
+            System.Console.WriteLine("  A  B  C  D  E  F  G  H");
         }
         public static PosicaoXadrez LerPosicaoXadrez()
         {
