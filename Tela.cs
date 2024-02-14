@@ -59,6 +59,7 @@ namespace Chess_Console
                 }
                 System.Console.WriteLine();
             }
+            System.Console.WriteLine("_________________________");
             System.Console.WriteLine("  A  B  C  D  E  F  G  H");
         }
         public static void ImprimirTela(Tabuleiro tab, bool[,] posicoesPossiveis)
@@ -87,6 +88,7 @@ namespace Chess_Console
 
             }
             Console.BackgroundColor = fundoOriginal;
+            System.Console.WriteLine("_________________________");
             System.Console.WriteLine("  A  B  C  D  E  F  G  H");
         }
         public static PosicaoXadrez LerPosicaoXadrez()
