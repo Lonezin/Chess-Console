@@ -12,6 +12,7 @@ namespace Chess_Console.Xadrez
         private HashSet<Peca> Pecas;
         private HashSet<Peca> Capturadas;
         public bool Xeque { get; private set; }
+        public Peca VulneravelEnPassant {get; private set; }
         public PartidaDeXadrez ()
         {
             Tab = new Tabuleiro(8, 8);
@@ -19,6 +20,7 @@ namespace Chess_Console.Xadrez
             JogadorAtual = Cor.Branca;
             Terminada = false;
             Xeque = false;
+            VulneravelEnPassant = null;
             Pecas = new HashSet<Peca>();
             Capturadas = new HashSet<Peca>();
             ColocarPecas();
@@ -50,6 +52,24 @@ namespace Chess_Console.Xadrez
                 Peca T = Tab.RetirarPeca(origemDaTorre);
                 T.IcrementarQteMovimentos();
                 Tab.ColocarPeca(T, destinoDaTorre);
+            }
+            //#Jogada Especial en passant
+            if(p is Peao)
+            {
+                if (origem.Coluna != destino.Coluna && pecaCapturada == null)
+                {
+                    Posicao posP;
+                    if (p.Cor == Cor.Branca)
+                    {
+                        posP = new Posicao(destino.Linha + 1, destino.Coluna);
+                    }
+                    else
+                    {
+                        posP = new Posicao(destino.Linha -1, destino.Coluna);
+                    }
+                    pecaCapturada = Tab.RetirarPeca(posP);
+                    Capturadas.Add(pecaCapturada);
+                }
             }
             return pecaCapturada;
         }
@@ -83,6 +103,24 @@ namespace Chess_Console.Xadrez
                 T.DescrementarQteMovimentos();
                 Tab.ColocarPeca(T, origemDaTorre);
             }
+            //#Jogada Especial en passant
+            if(p is Peao)
+            {
+                if(origem.Coluna != destino.Coluna && pecaCapturada == VulneravelEnPassant)
+                {
+                    Peca peao = Tab.RetirarPeca(destino);
+                    Posicao posP;
+                    if (p.Cor == Cor.Branca)
+                    {
+                        posP = new Posicao(3, destino.Coluna);
+                    }
+                    else
+                    {
+                        posP = new Posicao(4, destino.Coluna);
+                    }
+                    Tab.ColocarPeca(peao, posP);
+                }
+            }
         }
         public void RealizaJogada(Posicao origem, Posicao destino)
         {
@@ -107,6 +145,17 @@ namespace Chess_Console.Xadrez
             else{
                 Turno++;
                 MudaJogador();
+            }
+
+            Peca p = Tab.Peca(destino);
+            //#Jogada Especial en passant
+            if(p is Peao && (destino.Linha == origem.Linha -2 || destino.Linha == origem.Linha + 2))
+            {
+                VulneravelEnPassant = p;
+            }
+            else
+            {
+                VulneravelEnPassant = null;
             }
         }
         public void ValidarPosicaoDeDestino (Posicao origem, Posicao destino)
@@ -252,14 +301,14 @@ namespace Chess_Console.Xadrez
             ColocaNovaPeca('f', 1, new Bispo(Tab, Cor.Branca));
             ColocaNovaPeca('g', 1, new Cavalo(Tab, Cor.Branca));
             ColocaNovaPeca('h', 1, new Torre(Tab, Cor.Branca));
-            ColocaNovaPeca('a', 2, new Peao(Tab, Cor.Branca));
-            ColocaNovaPeca('b', 2, new Peao(Tab, Cor.Branca));
-            ColocaNovaPeca('c', 2, new Peao(Tab, Cor.Branca));
-            ColocaNovaPeca('d', 2, new Peao(Tab, Cor.Branca));
-            ColocaNovaPeca('e', 2, new Peao(Tab, Cor.Branca));
-            ColocaNovaPeca('f', 2, new Peao(Tab, Cor.Branca));
-            ColocaNovaPeca('g', 2, new Peao(Tab, Cor.Branca));
-            ColocaNovaPeca('h', 2, new Peao(Tab, Cor.Branca));
+            ColocaNovaPeca('a', 2, new Peao(Tab, Cor.Branca, this));
+            ColocaNovaPeca('b', 2, new Peao(Tab, Cor.Branca, this));
+            ColocaNovaPeca('c', 2, new Peao(Tab, Cor.Branca, this));
+            ColocaNovaPeca('d', 2, new Peao(Tab, Cor.Branca, this));
+            ColocaNovaPeca('e', 2, new Peao(Tab, Cor.Branca, this));
+            ColocaNovaPeca('f', 2, new Peao(Tab, Cor.Branca, this));
+            ColocaNovaPeca('g', 2, new Peao(Tab, Cor.Branca, this));
+            ColocaNovaPeca('h', 2, new Peao(Tab, Cor.Branca, this));
 
             ColocaNovaPeca('a', 8, new Torre(Tab, Cor.Preta));
             ColocaNovaPeca('b', 8, new Cavalo(Tab, Cor.Preta));
@@ -270,16 +319,14 @@ namespace Chess_Console.Xadrez
             ColocaNovaPeca('f', 8, new Bispo(Tab, Cor.Preta));
             ColocaNovaPeca('g', 8, new Cavalo(Tab, Cor.Preta));
             ColocaNovaPeca('h', 8, new Torre(Tab, Cor.Preta));
-            ColocaNovaPeca('a', 7, new Peao(Tab, Cor.Preta));
-            ColocaNovaPeca('b', 7, new Peao(Tab, Cor.Preta));
-            ColocaNovaPeca('c', 7, new Peao(Tab, Cor.Preta));
-            ColocaNovaPeca('d', 7, new Peao(Tab, Cor.Preta));
-            ColocaNovaPeca('e', 7, new Peao(Tab, Cor.Preta));
-            ColocaNovaPeca('f', 7, new Peao(Tab, Cor.Preta));
-            ColocaNovaPeca('g', 7, new Peao(Tab, Cor.Preta));
-            ColocaNovaPeca('h', 7, new Peao(Tab, Cor.Preta));
-
-            
+            ColocaNovaPeca('a', 7, new Peao(Tab, Cor.Preta, this));
+            ColocaNovaPeca('b', 7, new Peao(Tab, Cor.Preta, this));
+            ColocaNovaPeca('c', 7, new Peao(Tab, Cor.Preta, this));
+            ColocaNovaPeca('d', 7, new Peao(Tab, Cor.Preta, this));
+            ColocaNovaPeca('e', 7, new Peao(Tab, Cor.Preta, this));
+            ColocaNovaPeca('f', 7, new Peao(Tab, Cor.Preta, this));
+            ColocaNovaPeca('g', 7, new Peao(Tab, Cor.Preta, this));
+            ColocaNovaPeca('h', 7, new Peao(Tab, Cor.Preta, this));         
         }
     }
 }
